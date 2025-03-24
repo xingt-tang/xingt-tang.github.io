@@ -2,9 +2,9 @@
 <html lang="{{ site.lang }}">
 
   <head>
+    {% include scripts/analytics.html %}
     {% if page.redirect %}<meta http-equiv="refresh" content="3; url={{ site.baseurl | prepend: site.url }}/" />{% endif %}
     {% include head.html %}
-    {% include scripts/analytics.html %}
   </head>
 
   <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}">
