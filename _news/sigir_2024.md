@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2024-03-26
+date: 2025-04-05
 inline: true
 ---
 
-One paper about multi-behavior learning for recommendation is accepted by SIGIR 2024.
+Two papers about LLM for recommendation and Multi-scenario recommendation is accepted by SIGIR 2025.
