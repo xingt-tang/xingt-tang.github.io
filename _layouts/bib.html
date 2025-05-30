@@ -68,7 +68,13 @@
               {% endif %}
             {% else %}
               {% if author_is_self %}
-                and <em><b>{{author.last}} {{author.first}}</b></em><sup>#</sup>
+                {% if entry.cof %}
+                    and <em><b>{{author.last}} {{author.first}}</b></em><sup>*</sup>
+                {% elsif entry.corr %}
+                    and <em><b>{{author.last}} {{author.first}}</b></em><sup>#</sup>
+                {% else %}
+                    and <em><b>{{author.last}} {{author.first}}</b></em>
+                {% endif %}
               {% else %}
                 {% if coauthor_url %}
                   and <a href="{{coauthor_url}}">{{author.last}} {{author.first}}</a>
