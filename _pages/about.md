@@ -23,6 +23,6 @@ Dr. Xing Tang is currently a Senior Researcher at Tencent. He obtained his Ph.D.
 **Research interest:** Recommendation, Uplift Modeling, Large Language Model.
 
 
-**Announcement:**  Interested in internship or collaboration. You can contact me if you are interested!
+**Announcement:**  I will join Shenzhen Technology University as Associate Professor soon. If you are interested in joining us and exploring exicting research opportunities, please don’t hesitate to reach out to me via email.
 
 
