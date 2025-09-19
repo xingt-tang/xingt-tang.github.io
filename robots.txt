@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: xingt-tang.github.io/sitemap.xml
