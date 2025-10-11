@@ -60,6 +60,7 @@ layout: default
     {% if page.selected_papers %}
       <h2>
         <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Selected Publications</a>
+        <p style="font-size:0.875rem">* represents Co-first author and # represents Corresponding author.</p>
       </h2>
       {% include selected_papers.liquid %}
     {% endif %}
