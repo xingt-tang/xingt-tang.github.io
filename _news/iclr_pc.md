@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2024-08-16
+date: 2024-08-28
 inline: true
 ---
 
-I will serve as PC member for ICLR 2025.
+I will serve as AC for ICLR 2026.

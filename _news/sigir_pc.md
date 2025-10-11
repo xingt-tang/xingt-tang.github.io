@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2025-01-11
+date: 2025-05-20
 inline: true
 ---
 
-I will serve as PC member for SIGIR 2025.
+I will serve as PC member for SIGIR-AP 2025.

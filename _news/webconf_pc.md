@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2024-08-14
+date: 2025-08-15
 inline: true
 ---
 
-I will serve as PC member for WebConf 2025.
+I will serve as PC member for WebConf Industry Track and Recsys Track 2025.

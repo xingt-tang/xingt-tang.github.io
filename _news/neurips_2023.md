@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2023-09-22
+date: 2025-09-19
 inline: true
 ---
 
-One paper about feature interaction for deep sparse network is accepted by Neurips 2023.
+Two paper about LLM finetuning and Sequential Recommendation are accepted by Neurips 2025.
