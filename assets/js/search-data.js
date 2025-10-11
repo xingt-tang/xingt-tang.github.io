@@ -142,8 +142,8 @@ ninja.data = [{
           section: "News",},{id: "news-i-will-serve-as-pc-member-for-aistats-2026-and-ecir-2026",
           title: 'I will serve as PC member for AISTATS 2026 and ECIR 2026.',
           description: "",
-          section: "News",},{id: "news-two-paper-about-llm-finetuning-and-sequential-recommendation-are-accepted-by-neurips-2025",
-          title: 'Two paper about LLM finetuning and Sequential Recommendation are accepted by Neurips 2025....',
+          section: "News",},{id: "news-two-papers-about-llm-finetuning-and-sequential-recommendation-are-accepted-by-neurips-2025",
+          title: 'Two papers about LLM finetuning and Sequential Recommendation are accepted by Neurips 2025....',
           description: "",
           section: "News",},{
         id: 'social-email',
