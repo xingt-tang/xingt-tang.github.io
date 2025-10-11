@@ -139,11 +139,18 @@ ninja.data = [{
           title: 'Two papers about LLM finetuning and Sequential Recommendation are accepted by Neurips 2025....',
           description: "",
           section: "News",},{
+        id: 'social-dblp',
+        title: 'DBLP',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://dblp.org/pid/09/2824-7.html", "_blank");
+        },
+      },{
         id: 'social-email',
         title: 'email',
         section: 'Socials',
         handler: () => {
-          window.open("mailto:%74%61%6E%67%78%69%6E%67%30%31@%67%6D%61%69%6C.%63%6F%6D", "_blank");
+          window.open("mailto:%78%69%6E%67.%74%61%6E%67@%68%6F%74%6D%61%69%6C.%63%6F%6D", "_blank");
         },
       },{
         id: 'social-github',
@@ -151,6 +158,20 @@ ninja.data = [{
         section: 'Socials',
         handler: () => {
           window.open("https://github.com/xingt-tang", "_blank");
+        },
+      },{
+        id: 'social-orcid',
+        title: 'ORCID',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://orcid.org/0000-0003-4360-0754", "_blank");
+        },
+      },{
+        id: 'social-researchgate',
+        title: 'ResearchGate',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.researchgate.net/profile/https://www.researchgate.net/profile/Tang-Xing-2/", "_blank");
         },
       },{
         id: 'social-rss',
