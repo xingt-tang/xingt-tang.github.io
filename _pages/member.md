@@ -1,6 +1,12 @@
+## Artificial Intelligence Information and Decision Lab (I.I.D Lab)
 - Prof. Xiuqiang He
 - Prof. Lingjie Li
-- Students: Jingyang Bin (Internship at Ant Group), Jie Liu, Chenglin Luo, Zhentai Chen.
+- Undergraduate Students: 
+    - Jingyang Bin (Internship at Ant Group)
+    - Jie Liu
+    - Chenglin Luo
+- Master Students:
+    - Zhentai Chen (co-supervised with Prof. Jingyan Jiang)
 
 Off-Campus Collaborator:
 
