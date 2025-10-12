@@ -181,6 +181,13 @@ ninja.data = [{
           window.open("https://scholar.google.com/citations?user=rtRexdQAAAAJ", "_blank");
         },
       },{
+        id: 'social-work',
+        title: 'Work',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://openreview.net/profile?id=~Xing_Tang2", "_blank");
+        },
+      },{
       id: 'light-theme',
       title: 'Change theme to light',
       description: 'Change the theme of the site to Light',
