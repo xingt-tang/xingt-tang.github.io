@@ -8,20 +8,24 @@ nav_order: 3
 display_categories: []
 horizontal: false
 ---
-Conference:
 
-Senior Area Chair/Area Chair:
-KDD 2025,2026
-ICLR 2026
-IJCNN 2025
+##Conference:
 
-PC member:
-DM: KDD(2019-),ICDM(2025),CIKM(2023-),ECML-PKDD(2024-),IEEE BigData(2024-) 
-IR: SIGIR(2025),WebConf(2024-),RecSys(2024-),WSDM(2024-),ECIR(2026)
-ML: NeurIPS(2024-),ICML(2024-), ICLR(2025), AISTATS(2025-),ACML(2024-)
-AI: AAAI(2024-),IJCAI(2024-),MM(2025)
+###Senior Area Chair/Area Chair:
 
-Journal Reviewer:
++KDD 2025,2026
++ICLR 2026
++IJCNN 2025
+
+###PC member:
+
++DM: KDD(2019-),ICDM(2025),CIKM(2023-),ECML-PKDD(2024-),IEEE BigData(2024-) 
++IR: SIGIR(2025),WebConf(2024-),RecSys(2024-),WSDM(2024-),ECIR(2026)
++ML: NeurIPS(2024-),ICML(2024-), ICLR(2025), AISTATS(2025-),ACML(2024-)
++AI: AAAI(2024-),IJCAI(2024-),MM(2025)
+
+###Journal Reviewer:
+
 TKDE,PR,KBS,EAAI,ESWA,COSE
 
 <!-- pages/projects.md -->
