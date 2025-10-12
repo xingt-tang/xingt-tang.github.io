@@ -25,7 +25,7 @@ ninja.data = [{
           },
         },{id: "nav-teaching",
           title: "Teaching",
-          description: "Fundamentals of Programming Language",
+          description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/teaching/";
