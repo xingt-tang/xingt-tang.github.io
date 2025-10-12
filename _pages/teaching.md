@@ -2,7 +2,8 @@
 layout: page
 permalink: /teaching/
 title: Teaching
-description: Fundamentals of Programming Language
+description:
 nav: true
 nav_order: 6
 ---
+## Fundamentals of Programming Language
