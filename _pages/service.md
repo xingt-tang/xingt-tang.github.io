@@ -9,7 +9,7 @@ display_categories: []
 horizontal: false
 ---
 
-## Conference:
+# Conference:
 
 ### Senior Area Chair/Area Chair:
 
@@ -24,7 +24,7 @@ horizontal: false
 - ML: NeurIPS(2024-),ICML(2024-), ICLR(2025), AISTATS(2025-),ACML(2024-)
 - AI: AAAI(2024-),IJCAI(2024-),MM(2025)
 
-### Journal Reviewer:
+# Journal Reviewer:
 
 - IEEE Transaction on Data Engineering (TKDE)
 - Pattern Recognition (PR)
