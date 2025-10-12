@@ -129,7 +129,7 @@ ninja.data = [{
           section: "News",},{id: "news-i-will-serve-as-sac-for-kdd-2026-ads-track-pc-member-for-kdd-2026-research-track-datasets-and-benchmarks-track-febrary-cycle",
           title: 'I will serve as SAC for KDD 2026 ADS track, PC member for...',
           description: "",
-          section: "News",},{id: "news-i-will-serve-as-pc-member-for-webconf-industry-track-and-recsys-track-2025",
+          section: "News",},{id: "news-i-will-serve-as-pc-member-for-webconf-industry-track-and-recsys-track-2026",
           title: 'I will serve as PC member for WebConf Industry Track and Recsys Track...',
           description: "",
           section: "News",},{id: "news-i-will-serve-as-pc-member-for-aistats-2026-and-ecir-2026",
