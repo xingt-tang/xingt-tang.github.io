@@ -12,8 +12,8 @@ profiles:
   - align: right
 ---
 
-## Artificial Intelligence Information and Decision Lab (I.I.D Lab)
-- Prof. Xiuqiang He
+## Intelligent Information and Decision Lab (I.I.D Lab)
+- [Prof. Xiuqiang He](https://he-xiuqiang.github.io/)
 - Prof. Lingjie Li
 - Undergraduate Students:
     - Jingyang Bin (Internship at Ant Group)
@@ -24,7 +24,7 @@ profiles:
 
 Off-Campus Collaborator:
 
-- Prof. Dugang Liu (Shenzhen University)
-- Dr. Fuyuan Lyu (McGill University)
-- Dr. Shiwei Li (Huazhong University of Science and Technology)
+- [Prof. Dugang Liu](https://dgliu.github.io) (Shenzhen University)
+- [Dr. Fuyuan Lyu](https://fuyuanlyu.github.io) (McGill University)
+- [Dr. Shiwei Li](https://leopold1423.github.io/) (Huazhong University of Science and Technology)
 - Dr. Ziqiang Cui (City University of HongKong)
