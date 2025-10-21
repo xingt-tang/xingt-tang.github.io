@@ -5,6 +5,7 @@
     - Jingyang Bin (Internship at Ant Group)
     - Jie Liu
     - Chenglin Luo
+    - Xiongfeng Shan
 - Master Students:
     - Zhentai Chen (co-supervised with Prof. Jingyan Jiang)
 
