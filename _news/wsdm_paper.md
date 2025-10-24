@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2024-10-24
+date: 2025-10-24
 inline: true
 ---
 
-One paper about fusion learning for CTR prediction is accepted by WSDM 2025.
+One paper about multi-scenario multi-task recommendation is accepted by WSDM 2026.
