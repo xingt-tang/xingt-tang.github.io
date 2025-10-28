@@ -22,10 +22,12 @@ profiles:
     - Xiongfeng Shan
 - Master Students:
     - Zhentai Chen (co-supervised with Prof. Jingyan Jiang)
+- PhD Students:
+    - Yuhao Wu (co-superviesed with Prof. Dugang Liu)
 
 Off-Campus Collaborator:
 
 - [Prof. Dugang Liu](https://dgliu.github.io) (Shenzhen University)
 - [Dr. Fuyuan Lyu](https://fuyuanlyu.github.io) (McGill University)
 - [Dr. Shiwei Li](https://leopold1423.github.io/) (Huazhong University of Science and Technology)
-- Dr. Ziqiang Cui (City University of HongKong)
+- [Dr. Ziqiang Cui](https://ziqiangcui.github.io/) (City University of HongKong)
