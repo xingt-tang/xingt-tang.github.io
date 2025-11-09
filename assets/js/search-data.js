@@ -123,6 +123,9 @@ ninja.data = [{
           section: "News",},{id: "news-one-paper-about-multi-scenario-multi-task-recommendation-is-accepted-by-wsdm-2026",
           title: 'One paper about multi-scenario multi-task recommendation is accepted by WSDM 2026.',
           description: "",
+          section: "News",},{id: "news-one-paper-about-tta-is-accpeted-by-aaai-2026",
+          title: 'One paper about TTA is accpeted by AAAI 2026.',
+          description: "",
           section: "News",},{
         id: 'social-dblp',
         title: 'DBLP',
