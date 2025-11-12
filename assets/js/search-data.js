@@ -123,8 +123,11 @@ ninja.data = [{
           section: "News",},{id: "news-one-paper-about-multi-scenario-multi-task-recommendation-is-accepted-by-wsdm-2026",
           title: 'One paper about multi-scenario multi-task recommendation is accepted by WSDM 2026.',
           description: "",
-          section: "News",},{id: "news-one-paper-about-tta-is-accpeted-by-aaai-2026",
-          title: 'One paper about TTA is accpeted by AAAI 2026.',
+          section: "News",},{id: "news-one-paper-about-test-time-adaptation-is-accpeted-by-aaai-2026",
+          title: 'One paper about Test-time Adaptation is accpeted by AAAI 2026.',
+          description: "",
+          section: "News",},{id: "news-i-will-serve-as-reviewer-for-cvpr-2026",
+          title: 'I will serve as Reviewer for CVPR 2026.',
           description: "",
           section: "News",},{
         id: 'social-dblp',
