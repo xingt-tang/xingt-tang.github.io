@@ -4,4 +4,4 @@ date: 2025-11-09
 inline: true
 ---
 
-One paper about TTA is accpeted by AAAI 2026.
+One paper about Test-time Adaptation is accpeted by AAAI 2026.

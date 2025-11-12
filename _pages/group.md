@@ -20,8 +20,10 @@ profiles:
     - Jie Liu
     - Chenglin Luo
     - Xiongfeng Shan
+    - Jiaxin Dong
 - Master Students:
     - Zhentai Chen (co-supervised with Prof. Jingyan Jiang)
+    - Jun Zhang (co-supervised with Prof. Dugang Liu)
 - PhD Students:
     - Yuhao Wu (co-superviesed with Prof. Dugang Liu)
 
