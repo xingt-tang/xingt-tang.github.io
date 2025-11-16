@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2025-03-13
+date: 2025-11-14
 inline: true
 ---
 
-I will serve as PC member for ACML 2025 and IEEE BigData 2025.
+I will serve as Area Chair for ICASSP 2025(MLSP track).
