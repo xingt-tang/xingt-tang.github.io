@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2024-12-12
+date: 2025-12-19
 inline: true
 ---
 
-I will serve as PC member for ICML 2025.
+I will serve as Reviewer for ICML 2025.
