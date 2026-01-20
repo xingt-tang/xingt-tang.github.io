@@ -129,6 +129,9 @@ ninja.data = [{
           section: "News",},{id: "news-i-will-serve-as-pc-member-for-sigir-2026",
           title: 'I will serve as PC member for SIGIR 2026.',
           description: "",
+          section: "News",},{id: "news-one-paper-about-function-calling-for-llm-is-accepted-by-webconf-2026",
+          title: 'One paper about Function calling for LLM is accepted by WebConf 2026.',
+          description: "",
           section: "News",},{
         id: 'social-dblp',
         title: 'DBLP',
