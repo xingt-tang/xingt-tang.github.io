@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2025-01-23
+date: 2026-01-26
 inline: true
 ---
 
-One paper about reward modeling for LLM is accepted by ICLR 2025.
+One paper about LoRA for finetuing is accepted by ICLR 2026.

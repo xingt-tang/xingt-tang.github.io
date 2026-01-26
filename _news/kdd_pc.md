@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2025-08-03
+date: 2026-01-24
 inline: true
 ---
 
-I will serve as SAC for KDD 2026 ADS track, PC member for KDD 2026 Research track, Datasets and Benchmarks Track(Febrary Cycle).
+I will serve as AC for KDD 2026 ADS track (Feburary Track), Reviewer for ECCV 2026 and ACL 2026.
