@@ -15,8 +15,8 @@ horizontal: false
 
 - KDD 2025,2026
 - ICLR 2026
-- IJCNN 2025
 - ICASSSP 2026
+- IJCNN 2025,2026
 
 ##### PC member:
 
