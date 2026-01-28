@@ -129,8 +129,8 @@ ninja.data = [{
           section: "News",},{id: "news-one-paper-about-lora-for-finetuing-is-accepted-by-iclr-2026",
           title: 'One paper about LoRA for finetuing is accepted by ICLR 2026.',
           description: "",
-          section: "News",},{id: "news-i-will-serve-as-pc-member-for-ijcai-2026-and-kdd-2026-research-track-feburary-cycle",
-          title: 'I will serve as PC member for IJCAI 2026 and KDD 2026 Research...',
+          section: "News",},{id: "news-i-will-serve-as-pc-member-for-ijcai-2026-ecml-pkdd-2026-and-kdd-2026-research-track-feburary-cycle",
+          title: 'I will serve as PC member for IJCAI 2026, ECML-PKDD 2026, and KDD...',
           description: "",
           section: "News",},{
         id: 'social-dblp',
