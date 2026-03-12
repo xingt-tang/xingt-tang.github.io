@@ -28,12 +28,15 @@ horizontal: false
 ### Journal Reviewer:
 
 - IEEE Transaction on Data Engineering (TKDE)
-- ACM Transaction on Information Systems (TOIS)
 - IEEE Transactions on Neural Networks and Learning Systems (TNNLS)
+- ACM Transaction on Information Systems (TOIS)
+- ACM Transaction on Recommender Systems (TORS)
+- Neural Networks (NeuNet)
 - Pattern Recognition (PR)
 - Knowledge-Based System (KNOSYS)
 - Engineering Application of Artificial Intelligence (EAAI)
 - Expert Systems With Application (ESWA)
+- Neural Computing (NeuCom)
 - Computer and Security (COSE)
 
 <!-- pages/projects.md -->
