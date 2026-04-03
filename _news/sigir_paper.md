@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2025-04-05
+date: 2026-04-03
 inline: true
 ---
 
-Two papers about LLM for recommendation and Multi-scenario recommendation is accepted by SIGIR 2025.
+Two papers about test-time scaling for large scale recommendation and semantic id for federated recommendation is accepted by SIGIR 2026.
