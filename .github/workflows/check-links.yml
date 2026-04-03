@@ -1,0 +1,19 @@
+name: Check Links on Site
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  check-links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check links safely
+        uses: lycheeverse/lychee-action@v1
+        with:
+          args: --no-progress ./_site/**/*.html --exclude-mail --accept 403,429 --timeout 10
+          fail: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
