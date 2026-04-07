@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2025-11-12
+date: 2026-04-07
 inline: true
 ---
 
-I will serve as Reviewer for CVPR 2026.
+Two papers about LLM reasoning and LLM-enhanced recommendation are accepted by ACL 2026 main and findings.
