@@ -111,7 +111,7 @@ ninja.data = [{
           section: "News",},{id: "news-one-paper-about-function-calling-for-llm-is-accepted-by-webconf-2026",
           title: 'One paper about Function calling for LLM is accepted by WebConf 2026.',
           description: "",
-          section: "News",},{id: "news-i-will-serve-as-area-chair-for-kdd-2026-research-ads-track-feburary-cycle-reviewer-for-eccv-2026-and-acl-2026",
+          section: "News",},{id: "news-i-will-serve-as-area-chair-for-kdd-2026-research-ads-track-feburary-cycle-pc-for-acl-2026",
           title: 'I will serve as Area Chair for KDD 2026 Research, ADS track (Feburary...',
           description: "",
           section: "News",},{id: "news-one-paper-about-lora-for-finetuing-is-accepted-by-iclr-2026",
