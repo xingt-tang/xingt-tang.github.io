@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2025-05-30
+date: 2026-04-25
 inline: true
 ---
-I will serve as PC member for ICDM 2025.
+I will serve as PC member for ICDM 2026.
