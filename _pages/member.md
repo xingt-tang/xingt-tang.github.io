@@ -2,12 +2,12 @@
 - Prof. Xiuqiang He
 - Prof. Lingjie Li
 - Undergraduate Students: 
-    - Jingyang Bin (Internship at Ant Group)
-    - Jie Liu
+    - Jingyang Bin
     - Chenglin Luo
     - Xiongfeng Shan
 - Master Students:
-    - Zhentai Chen (co-supervised with Prof. Jingyan Jiang)
+    - Zhentai Chen (co-supervised with Prof. Jingyan Jiang, internship at AntGroup, SIGIR2026)
+    - Jun Zhang(co-supervised with Prof. Dugang Liu, internship at JD.com, SIGIR2026)
 
 Off-Campus Collaborator:
 
