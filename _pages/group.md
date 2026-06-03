@@ -21,7 +21,7 @@ profiles:
     - Chenglin Luo
     - Xiongfeng Shan
 - Master Students:
-    - Zhentai Chen (co-supervised with Prof. Jingyan Jiang, internship at AntGroup, SIGIR2026)
+    - Zhentai Chen (co-supervised with Prof.Jingyan Jiang, internship at AntGroup, SIGIR2026)
     - Jun Zhang (co-supervised with Prof. Dugang Liu, internship at JD.com, SIGIR2026)
 - PhD Students:
     - Yuhao Wu (co-superviesed with Prof. Dugang Liu)
@@ -29,6 +29,6 @@ profiles:
 Off-Campus Collaborator:
 
 - [Prof. Dugang Liu](https://dgliu.github.io) (Shenzhen University)
-- [Dr. Fuyuan Lyu](https://fuyuanlyu.github.io) (McGill University)
-- [Dr. Shiwei Li](https://leopold1423.github.io/) (Huazhong University of Science and Technology)
+- [Dr. Fuyuan Lyu](https://fuyuanlyu.github.io) (Vatic Labs)
+- [Dr. Shiwei Li](https://leopold1423.github.io/) (Tongyi Lab)
 - [Dr. Ziqiang Cui](https://ziqiangcui.github.io/) (City University of HongKong)
