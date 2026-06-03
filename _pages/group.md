@@ -32,3 +32,4 @@ Off-Campus Collaborator:
 - [Dr. Fuyuan Lyu](https://fuyuanlyu.github.io) (Vatic Labs)
 - [Dr. Shiwei Li](https://leopold1423.github.io/) (Tongyi Lab)
 - [Dr. Ziqiang Cui](https://ziqiangcui.github.io/) (City University of HongKong)
+- [Dr. Zexu Sun](https://scholar.google.com/citations?user=1NXzf0AAAAAJ&hl=zh-CN) (JD EXPLORE ACADEMY)
