@@ -4,4 +4,4 @@ date: 2023-06-07
 inline: true
 ---
 
-One paper about multi-domain recommendation is accepted by ECML PKDD 2023.
+One paper on multi-domain recommendation was accepted by ECML-PKDD 2023.

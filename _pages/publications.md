@@ -3,7 +3,7 @@
 layout: page
 
 permalink: /publications/
-description: "* represents Co-first author,# represents Corresponding author"
+description: "* represents a co-first author; # represents a corresponding author."
 title: Publications
 
 nav: true

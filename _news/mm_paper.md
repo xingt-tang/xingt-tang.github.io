@@ -4,4 +4,4 @@ date: 2026-07-10
 inline: true
 ---
 
-One paper about tool selection is accepted by MM 2026.
+One paper on tool selection was accepted by ACM MM 2026.

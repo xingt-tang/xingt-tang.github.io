@@ -6,6 +6,8 @@ description:
 nav: true
 nav_order: 6
 ---
-- ### Fall 2025 Fundamentals of Programming Language
-- ### Spring 2026 Python Programming
-- ### Spring 2026 Deep Learning
+### Fall 2025 — Fundamentals of Programming Languages
+
+### Spring 2026 — Python Programming
+
+### Spring 2026 — Deep Learning

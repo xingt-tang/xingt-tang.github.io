@@ -4,4 +4,4 @@ date: 2025-12-20
 inline: true
 ---
 
-I will serve as PC member for SIGIR 2026.
+I will serve as a PC member for SIGIR 2026.

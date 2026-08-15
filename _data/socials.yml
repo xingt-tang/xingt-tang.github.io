@@ -32,7 +32,7 @@ orcid_id: 0000-0003-4360-0754 # your ORCID ID
 # pinterest_id: # your pinterest id
 # publons_id: # your ID on Publons
 # quora_username: # your Quora username
-research_gate_profile: https://www.researchgate.net/profile/Tang-Xing-2 # your profile on ResearchGate
+research_gate_profile: Tang-Xing-2 # your profile on ResearchGate
 # rss_icon: true # comment this line to hide the RSS icon
 scholar_userid: rtRexdQAAAAJ # your Google Scholar ID
 # scopus_id: # your profile on Scopus
@@ -50,4 +50,3 @@ work_url: https://openreview.net/profile?id=~Xing_Tang2 # work page URL
 # x_username: # your X handle
 # youtube_id: # your youtube channel id (youtube.com/@<youtube_id>)
 # zotero_username: # your zotero username
-

@@ -4,4 +4,4 @@ date: 2025-09-19
 inline: true
 ---
 
-Two papers about LLM finetuning and Sequential Recommendation are accepted by Neurips 2025.
+Two papers on LLM fine-tuning and sequential recommendation were accepted by NeurIPS 2025.

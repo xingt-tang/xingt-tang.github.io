@@ -4,4 +4,4 @@ date: 2025-12-19
 inline: true
 ---
 
-I will serve as Reviewer for ICML 2026.
+I will serve as a reviewer for ICML 2026.

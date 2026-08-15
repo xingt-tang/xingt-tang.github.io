@@ -35,7 +35,16 @@ body.sticky-bottom-footer {
 .profile {
   img {
     width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    object-position: 50% 65%;
   }
+}
+
+.author-note {
+  margin-top: -0.25rem;
+  font-size: 0.875rem;
+  color: var(--global-text-color-light);
 }
 
 // TODO: redefine content layout.

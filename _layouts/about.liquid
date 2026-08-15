@@ -26,9 +26,9 @@ layout: default
       rounded' %}
           {% endif %}
           {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
-      30vw, 95vw"{% endcapture %}
+      30vw, 95vw{% endcapture %}
           {%
-            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
+            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image_alt
             cache_bust=true
           %}
         {% endif %}
@@ -60,8 +60,8 @@ layout: default
     {% if page.selected_papers %}
       <h2>
         <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Selected Publications</a>
-        <p style="font-size:0.875rem">* represents Co-first author and # represents Corresponding author.</p>
       </h2>
+      <p class="author-note">* represents a co-first author; # represents a corresponding author.</p>
       {% include selected_papers.liquid %}
     {% endif %}
 

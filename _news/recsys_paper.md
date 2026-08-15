@@ -4,4 +4,4 @@ date: 2026-07-10
 inline: true
 ---
 
-One paper about LLM for non-overlapping non-overlapping cross-domain CTR prediction is accepted by RecSys 2026.
+One paper on LLMs for non-overlapping cross-domain CTR prediction was accepted by RecSys 2026.

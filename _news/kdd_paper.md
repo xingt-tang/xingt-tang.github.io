@@ -4,4 +4,4 @@ date: 2026-05-17
 inline: true
 ---
 
-Two papers about LLM for FinQA and multi-modal CTR are accepted by KDD 2026 ADS track(February Cycle).
+Two papers on LLMs for financial QA and multimodal CTR were accepted by the KDD 2026 ADS track (February Cycle).
