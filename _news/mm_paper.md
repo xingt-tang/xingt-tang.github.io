@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2024-07-16
+date: 2026-07-10
 inline: true
 ---
 
-One paper about compression for federated learning is accepted by MM 2024.
+One paper about tool selection is accepted by MM 2026.

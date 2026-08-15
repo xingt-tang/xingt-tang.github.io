@@ -16,15 +16,15 @@ profiles:
 - [Prof. Xiuqiang He](https://he-xiuqiang.github.io/)
 - Prof. Lingjie Li
 - Undergraduate Students:
-    - Jingyang Bin 
+    - Jingyang Bin (RecSys2026,CIKM2026,KDD2026)
     - Hanchong Chen( Master in PolyU of HK)
-    - Chenglin Luo
+    - Zhuanglin Chen
     - Xiongfeng Shan
 - Master Students:
     - Zhentai Chen (co-supervised with Prof.Jingyan Jiang, internship at AntGroup, SIGIR2026)
     - Jun Zhang (co-supervised with Prof. Dugang Liu, internship at JD.com, SIGIR2026)
 - PhD Students:
-    - Yuhao Wu (co-superviesed with Prof. Dugang Liu)
+    - Yuhao Wu (co-superviesed with Prof. Dugang Liu,WISE2026)
 
 Off-Campus Collaborator:
 

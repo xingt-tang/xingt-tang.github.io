@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2024-07-22
+date: 2026-07-10
 inline: true
 ---
 
-Two papers about multitask recommendation and uplift modeling are accepted by RecSys 2024.
+One paper about LLM for non-overlapping non-overlapping cross-domain CTR prediction is accepted by RecSys 2026.

@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2026-01-24
+date: 2026-07-30
 inline: true
 ---
 
-I will serve as Area Chair for KDD 2026 Research, ADS track (Feburary Cycle), PC for ACL 2026.
+I will serve as Area Chair for KDD 2027 Research, ADS track (1st Cycle).
