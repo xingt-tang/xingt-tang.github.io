@@ -1,0 +1,31 @@
+---
+import type { PublicationAuthor } from "@utils/bibtex";
+
+interface Props {
+  authors: PublicationAuthor[];
+  selfName: string;
+}
+
+const { authors, selfName } = Astro.props;
+---
+
+<p class="authors">
+  {
+    authors.map((author, index) => (
+      <>
+        {index > 0 && ", "}
+        {author.name === selfName ? <strong>{author.name}</strong> : author.name}
+        {author.isCoFirst && (
+          <sup class="author-marker" title="Co-first author" aria-label="Co-first author">
+            *
+          </sup>
+        )}
+        {author.isCorresponding && (
+          <sup class="author-marker" title="Corresponding author" aria-label="Corresponding author">
+            #
+          </sup>
+        )}
+      </>
+    ))
+  }
+</p>

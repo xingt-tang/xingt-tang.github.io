@@ -1,0 +1,274 @@
+---
+import AuthorList from "@components/AuthorList.astro";
+import { profile } from "@data/profile";
+import { group, service, teaching } from "@data/sections";
+import SiteLayout from "@layouts/SiteLayout.astro";
+import { cleanLatex, getAuthorDetails, getVenue, isSelected, parseBibtex } from "@utils/bibtex";
+import { news } from "@utils/news";
+
+import bibtexSource from "../../_bibliography/papers.bib?raw";
+
+const selectedPublications = parseBibtex(bibtexSource).filter(isSelected).slice(0, 10);
+const latestNews = news.slice(0, 10);
+
+const formatDate = (date: Date) =>
+  [date.getFullYear(), date.getMonth() + 1, date.getDate()]
+    .map((part, index) => (index === 0 ? String(part) : String(part).padStart(2, "0")))
+    .join("-");
+
+const publicationPreview = (preview?: string) => (preview ? `/assets/img/publication_preview/${preview}` : undefined);
+
+const publicationLinks = (fields: Record<string, string>) =>
+  [
+    fields.pdf && { label: "PDF", href: `/assets/pdf/${fields.pdf}` },
+    fields.code && { label: "Code", href: fields.code },
+    fields.html && { label: "Project", href: fields.html },
+    fields.website && { label: "Website", href: fields.website },
+  ].filter((link): link is { label: string; href: string } => Boolean(link));
+---
+
+<SiteLayout>
+  <div class="page-shell">
+    <section id="about" class="hero section-anchor" aria-labelledby="about-heading">
+      <div class="hero-copy">
+        <h1 id="about-heading">{profile.name}</h1>
+        <p class="role">{profile.role}</p>
+        <p class="institution">{profile.institution}</p>
+
+        <div class="bio" set:html={profile.bio} />
+
+        <div class="interest-list" aria-label="Research interests">
+          {profile.interests.map((interest) => <span>{interest}</span>)}
+        </div>
+
+        <div class="social-links" aria-label="Professional profiles">
+          {
+            profile.links.map((link) => (
+              <a
+                href={link.href}
+                target={link.href.startsWith("http") ? "_blank" : undefined}
+                rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
+              >
+                {link.label}
+              </a>
+            ))
+          }
+        </div>
+      </div>
+
+      <aside class="profile-panel">
+        <img src={profile.avatar} alt="Geometric portrait of Xing Tang" width="720" height="720" fetchpriority="high" />
+        <p>{profile.announcement}</p>
+      </aside>
+    </section>
+
+    <section id="news" class="content-section section-anchor" aria-labelledby="news-heading">
+      <div class="section-heading">
+        <p class="section-index">01</p>
+        <h2 id="news-heading">News</h2>
+      </div>
+
+      <ol class="news-list" tabindex="0" aria-label="Recent news">
+        {
+          latestNews.map((item) => (
+            <li>
+              <time datetime={formatDate(item.date)}>{formatDate(item.date).replaceAll("-", ".")}</time>
+              <p>{item.body}</p>
+            </li>
+          ))
+        }
+      </ol>
+    </section>
+
+    <section id="publications" class="content-section section-anchor" aria-labelledby="publications-heading">
+      <div class="section-heading section-heading-with-action">
+        <p class="section-index">02</p>
+        <div>
+          <h2 id="publications-heading">Selected Publications</h2>
+          <p class="author-legend heading-author-legend" aria-label="Publication author markers">
+            <span><sup>*</sup> Co-first author</span>
+            <span><sup>#</sup> Corresponding author</span>
+          </p>
+        </div>
+        <a class="full-list-link" href="/publications/">
+          <span>Full publication list</span>
+          <span aria-hidden="true">→</span>
+        </a>
+      </div>
+
+      <ol class="publication-list">
+        {
+          selectedPublications.map((entry, index) => {
+            const title = cleanLatex(entry.fields.title);
+            const authors = getAuthorDetails(entry);
+            const venue = getVenue(entry);
+            const preview = publicationPreview(entry.fields.preview);
+            const links = publicationLinks(entry.fields);
+
+            return (
+              <li class:list={["publication", { "has-preview": preview }]}>
+                {preview && (
+                  <button
+                    class="publication-figure"
+                    type="button"
+                    data-figure-open={preview}
+                    data-figure-caption={title}
+                    aria-label={`Open publication figure for ${title}`}
+                  >
+                    <img src={preview} alt={`Publication figure for ${title}`} loading="lazy" />
+                    <span>View figure</span>
+                  </button>
+                )}
+
+                <article class="publication-copy">
+                  <div class="publication-kicker">
+                    <span>{String(index + 1).padStart(2, "0")}</span>
+                    <span>{entry.fields.year}</span>
+                  </div>
+                  <h3>{title}</h3>
+                  <AuthorList authors={authors} selfName={profile.name} />
+                  <p class="venue">{venue}</p>
+                  {links.length > 0 && (
+                    <div class="publication-links">
+                      {links.map((link) => (
+                        <a href={link.href} target="_blank" rel="noopener noreferrer">
+                          {link.label}
+                        </a>
+                      ))}
+                    </div>
+                  )}
+                </article>
+              </li>
+            );
+          })
+        }
+      </ol>
+    </section>
+
+    <section id="service" class="content-section section-anchor" aria-labelledby="service-heading">
+      <div class="section-heading">
+        <p class="section-index">03</p>
+        <h2 id="service-heading">Service</h2>
+      </div>
+
+      <div class="service-grid">
+        <article class="service-block">
+          <p class="service-label">Conferences</p>
+          <h3>{service.leadership.label}</h3>
+          <ul>
+            {service.leadership.items.map((item) => <li>{item}</li>)}
+          </ul>
+        </article>
+
+        <article class="service-block service-pc">
+          <p class="service-label">Conferences</p>
+          <h3>Program Committee Member</h3>
+          <dl>
+            {
+              service.programCommittee.map((item) => (
+                <div>
+                  <dt>{item.label}</dt>
+                  <dd>{item.value}</dd>
+                </div>
+              ))
+            }
+          </dl>
+        </article>
+
+        <details class="journal-list">
+          <summary>
+            <span>Journal Reviewer</span>
+            <span>{service.journals.length} journals</span>
+          </summary>
+          <ul>
+            {service.journals.map((journal) => <li>{journal}</li>)}
+          </ul>
+        </details>
+      </div>
+    </section>
+
+    <section id="group" class="content-section section-anchor" aria-labelledby="group-heading">
+      <div class="section-heading">
+        <p class="section-index">04</p>
+        <div>
+          <h2 id="group-heading">Group</h2>
+          <p class="section-context">{group.name}</p>
+        </div>
+      </div>
+
+      <div class="group-grid">
+        {
+          group.categories.map((category) => (
+            <article class="group-category">
+              <h3>{category.label}</h3>
+              <ul>
+                {category.people.map((person) => (
+                  <li>
+                    <div>
+                      {person.href ? (
+                        <a href={person.href} target="_blank" rel="noopener noreferrer">
+                          {person.name}
+                        </a>
+                      ) : (
+                        <strong>{person.name}</strong>
+                      )}
+                      {person.note && <p>{person.note}</p>}
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+
+    <section id="teaching" class="content-section section-anchor" aria-labelledby="teaching-heading">
+      <div class="section-heading">
+        <p class="section-index">05</p>
+        <h2 id="teaching-heading">Teaching</h2>
+      </div>
+
+      <ol class="teaching-list">
+        {
+          teaching.map((item, index) => (
+            <li>
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              <time>{item.term}</time>
+              <h3>{item.course}</h3>
+            </li>
+          ))
+        }
+      </ol>
+    </section>
+  </div>
+
+  <dialog class="figure-dialog" aria-labelledby="figure-dialog-caption">
+    <button class="figure-dialog-close" type="button" aria-label="Close figure">×</button>
+    <img src="" alt="" />
+    <p id="figure-dialog-caption"></p>
+  </dialog>
+
+  <script>
+    const dialog = document.querySelector<HTMLDialogElement>(".figure-dialog");
+    const dialogImage = dialog?.querySelector<HTMLImageElement>("img");
+    const dialogCaption = dialog?.querySelector<HTMLParagraphElement>("p");
+
+    document.querySelectorAll<HTMLButtonElement>("[data-figure-open]").forEach((button) => {
+      button.addEventListener("click", () => {
+        if (!dialog || !dialogImage || !dialogCaption) return;
+        dialogImage.src = button.dataset.figureOpen ?? "";
+        dialogImage.alt = button.dataset.figureCaption ?? "Publication figure";
+        dialogCaption.textContent = button.dataset.figureCaption ?? "";
+        dialog.showModal();
+      });
+    });
+
+    dialog?.querySelector<HTMLButtonElement>(".figure-dialog-close")?.addEventListener("click", () => {
+      dialog.close();
+    });
+    dialog?.addEventListener("click", (event) => {
+      if (event.target === dialog) dialog.close();
+    });
+  </script>
+</SiteLayout>

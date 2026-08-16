@@ -6,7 +6,7 @@ description:
 
 profile:
   align: right
-  image: me.png
+  image: portrait-geometric-v4.png
   image_alt: Portrait of Xing Tang
   address: 
 

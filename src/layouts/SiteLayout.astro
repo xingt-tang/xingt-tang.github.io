@@ -1,0 +1,104 @@
+---
+import { profile } from "@data/profile";
+import "@styles/global.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title = profile.name, description = profile.description } = Astro.props;
+const canonical = new URL(Astro.url.pathname, "https://xingt-tang.github.io");
+const socialImage = new URL("/og.png", "https://xingt-tang.github.io");
+const isHome = Astro.url.pathname === "/";
+const homeSectionHref = (section: string) => (isHome ? `#${section}` : `/#${section}`);
+---
+
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={socialImage} />
+    <meta property="og:image:width" content="1733" />
+    <meta property="og:image:height" content="908" />
+    <meta property="og:image:alt" content="Xing Tang academic homepage preview" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImage} />
+    <title>{title}</title>
+    <script is:inline>
+      const savedTheme = localStorage.getItem("theme");
+      const preferredTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.dataset.theme = savedTheme || preferredTheme;
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href={isHome ? "#about" : "/"} aria-label="Back to introduction">{profile.name}</a>
+        <nav class="anchor-nav" aria-label="Page sections">
+          <a href={homeSectionHref("about")} data-section-link={isHome ? "about" : undefined}>About</a>
+          <a href={homeSectionHref("news")} data-section-link={isHome ? "news" : undefined}>News</a>
+          <a
+            href={isHome ? "#publications" : "/publications/"}
+            data-section-link={isHome ? "publications" : undefined}
+            aria-current={!isHome ? "page" : undefined}>Publications</a
+          >
+          <a href={homeSectionHref("service")} data-section-link={isHome ? "service" : undefined}>Service</a>
+          <a href={homeSectionHref("group")} data-section-link={isHome ? "group" : undefined}>Group</a>
+          <a href={homeSectionHref("teaching")} data-section-link={isHome ? "teaching" : undefined}>Teaching</a>
+        </nav>
+        <button class="theme-toggle" type="button" aria-label="Switch color theme">
+          <span aria-hidden="true">◐</span>
+        </button>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <span>© {new Date().getFullYear()} {profile.name}</span>
+    </footer>
+
+    <script>
+      const themeButton = document.querySelector<HTMLButtonElement>(".theme-toggle");
+      themeButton?.addEventListener("click", () => {
+        const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+        document.documentElement.dataset.theme = nextTheme;
+        localStorage.setItem("theme", nextTheme);
+      });
+
+      const links = [...document.querySelectorAll<HTMLAnchorElement>("[data-section-link]")];
+      const sections = links
+        .map((link) => document.getElementById(link.dataset.sectionLink ?? ""))
+        .filter((section): section is HTMLElement => section !== null);
+
+      if (sections.length > 0) {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            const visible = entries.filter((entry) => entry.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+            if (!visible) return;
+            links.forEach((link) => {
+              link.toggleAttribute("aria-current", link.dataset.sectionLink === visible.target.id);
+            });
+          },
+          { rootMargin: "-25% 0px -65%", threshold: [0, 0.2, 0.6] }
+        );
+        sections.forEach((section) => observer.observe(section));
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,101 @@
+---
+import AuthorList from "@components/AuthorList.astro";
+import { profile } from "@data/profile";
+import { getCcfRank } from "@data/ccfRanks";
+import SiteLayout from "@layouts/SiteLayout.astro";
+import { cleanLatex, getAuthorDetails, getVenue, parseBibtex, type BibEntry } from "@utils/bibtex";
+
+import bibtexSource from "../../../_bibliography/papers.bib?raw";
+
+interface PublicationGroup {
+  year: string;
+  entries: BibEntry[];
+}
+
+const publications = parseBibtex(bibtexSource).sort((a, b) => {
+  return Number(b.fields.year || 0) - Number(a.fields.year || 0);
+});
+
+const publicationGroups = publications.reduce<PublicationGroup[]>((groups, entry) => {
+  const year = entry.fields.year || "Other";
+  const currentGroup = groups.at(-1);
+
+  if (currentGroup?.year === year) {
+    currentGroup.entries.push(entry);
+  } else {
+    groups.push({ year, entries: [entry] });
+  }
+
+  return groups;
+}, []);
+
+const pdfHref = (value: string) => (value.startsWith("http") ? value : `/assets/pdf/${value}`);
+
+const publicationLinks = (fields: Record<string, string>) =>
+  [
+    fields.pdf && { label: "PDF", href: pdfHref(fields.pdf) },
+    fields.code && { label: "Code", href: fields.code },
+    fields.html && { label: "Project", href: fields.html },
+    fields.website && { label: "Website", href: fields.website },
+  ].filter((link): link is { label: string; href: string } => Boolean(link));
+---
+
+<SiteLayout title={`Publications · ${profile.name}`} description={`Full publication list of ${profile.name}, organized by year.`}>
+  <div class="page-shell publication-archive">
+    <header class="archive-hero">
+      <a class="back-link" href="/#publications">← Back to homepage</a>
+      <h1>Publications</h1>
+      <p class="author-legend" aria-label="Publication author markers">
+        <span><sup>*</sup> Co-first author</span>
+        <span><sup>#</sup> Corresponding author</span>
+      </p>
+    </header>
+
+    <div class="archive-groups">
+      {
+        publicationGroups.map((group) => (
+          <section class="archive-year" aria-labelledby={`year-${group.year}`}>
+            <header>
+              <h2 id={`year-${group.year}`}>{group.year}</h2>
+              <span>
+                {group.entries.length} {group.entries.length === 1 ? "publication" : "publications"}
+              </span>
+            </header>
+
+            <ol class="archive-publication-list">
+              {group.entries.map((entry) => {
+                const title = cleanLatex(entry.fields.title);
+                const authors = getAuthorDetails(entry);
+                const venue = getVenue(entry);
+                const links = publicationLinks(entry.fields);
+                const ccfRank = getCcfRank(entry.key, entry.fields.ccf);
+
+                return (
+                  <li class="archive-publication">
+                    <article>
+                      <div class="archive-publication-title">
+                        <h3>{title}</h3>
+                        {ccfRank && <span class={`ccf-rank ccf-rank-${ccfRank.toLowerCase()}`}>CCF {ccfRank}</span>}
+                      </div>
+                      <AuthorList authors={authors} selfName={profile.name} />
+                      {venue && <p class="venue">{venue}</p>}
+                      {links.length > 0 && (
+                        <div class="publication-links">
+                          {links.map((link) => (
+                            <a href={link.href} target="_blank" rel="noopener noreferrer">
+                              {link.label}
+                            </a>
+                          ))}
+                        </div>
+                      )}
+                    </article>
+                  </li>
+                );
+              })}
+            </ol>
+          </section>
+        ))
+      }
+    </div>
+  </div>
+</SiteLayout>
