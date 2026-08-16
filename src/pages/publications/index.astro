@@ -2,6 +2,7 @@
 import AuthorList from "@components/AuthorList.astro";
 import { profile } from "@data/profile";
 import { getCcfRank } from "@data/ccfRanks";
+import { getJournalMetric } from "@data/journalMetrics";
 import SiteLayout from "@layouts/SiteLayout.astro";
 import { cleanLatex, getAuthorDetails, getVenue, parseBibtex, type BibEntry } from "@utils/bibtex";
 
@@ -69,13 +70,23 @@ const publicationLinks = (fields: Record<string, string>) =>
                 const venue = getVenue(entry);
                 const links = publicationLinks(entry.fields);
                 const ccfRank = getCcfRank(entry.key, entry.fields.ccf);
+                const journalMetric = getJournalMetric(entry.key);
 
                 return (
                   <li class="archive-publication">
                     <article>
                       <div class="archive-publication-title">
                         <h3>{title}</h3>
-                        {ccfRank && <span class={`ccf-rank ccf-rank-${ccfRank.toLowerCase()}`}>CCF {ccfRank}</span>}
+                        {(ccfRank || journalMetric) && (
+                          <div class="publication-badges">
+                            {ccfRank && <span class={`ccf-rank ccf-rank-${ccfRank.toLowerCase()}`}>CCF {ccfRank}</span>}
+                            {journalMetric && (
+                              <span class="journal-metric">
+                                {journalMetric.index} · IF {journalMetric.impactFactor.toFixed(1)}
+                              </span>
+                            )}
+                          </div>
+                        )}
                       </div>
                       <AuthorList authors={authors} selfName={profile.name} />
                       {venue && <p class="venue">{venue}</p>}

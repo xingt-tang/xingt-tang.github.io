@@ -339,7 +339,7 @@ a:focus-visible {
 }
 
 .news-list {
-  max-height: 190px;
+  max-height: 314px;
   overflow-y: auto;
   overscroll-behavior: contain;
   padding-right: 14px;
@@ -467,6 +467,13 @@ a:focus-visible {
   font-size: clamp(1.1rem, 2vw, 1.32rem);
   line-height: 1.35;
   letter-spacing: -0.018em;
+}
+
+.publication-title-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 .authors,
@@ -848,7 +855,16 @@ a:focus-visible {
   gap: 20px;
 }
 
-.ccf-rank {
+.publication-badges {
+  display: flex;
+  flex: 0 0 auto;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 6px;
+}
+
+.ccf-rank,
+.journal-metric {
   --ccf-color: var(--accent);
   flex: 0 0 auto;
   padding: 3px 7px;
@@ -861,6 +877,11 @@ a:focus-visible {
   font-weight: 760;
   letter-spacing: 0.06em;
   line-height: 1.4;
+}
+
+.journal-metric {
+  --ccf-color: var(--accent);
+  white-space: nowrap;
 }
 
 .ccf-rank-a {
@@ -1003,7 +1024,7 @@ a:focus-visible {
   }
 
   .news-list {
-    max-height: 230px;
+    max-height: 360px;
   }
 
   .publication.has-preview {
@@ -1088,6 +1109,10 @@ a:focus-visible {
   .archive-publication-title {
     gap: 12px;
   }
+
+  .publication-title-row {
+    gap: 12px;
+  }
 }
 
 @media (max-width: 470px) {
@@ -1115,6 +1140,15 @@ a:focus-visible {
   .full-list-link {
     width: 100%;
     min-width: 0;
+  }
+
+  .publication-title-row,
+  .archive-publication-title {
+    flex-direction: column;
+  }
+
+  .publication-badges {
+    justify-content: flex-start;
   }
 }
 

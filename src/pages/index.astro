@@ -1,5 +1,6 @@
 ---
 import AuthorList from "@components/AuthorList.astro";
+import { getJournalMetric } from "@data/journalMetrics";
 import { profile } from "@data/profile";
 import { group, service, teaching } from "@data/sections";
 import SiteLayout from "@layouts/SiteLayout.astro";
@@ -102,6 +103,7 @@ const publicationLinks = (fields: Record<string, string>) =>
             const title = cleanLatex(entry.fields.title);
             const authors = getAuthorDetails(entry);
             const venue = getVenue(entry);
+            const journalMetric = getJournalMetric(entry.key);
             const preview = publicationPreview(entry.fields.preview);
             const links = publicationLinks(entry.fields);
 
@@ -125,7 +127,14 @@ const publicationLinks = (fields: Record<string, string>) =>
                     <span>{String(index + 1).padStart(2, "0")}</span>
                     <span>{entry.fields.year}</span>
                   </div>
-                  <h3>{title}</h3>
+                  <div class="publication-title-row">
+                    <h3>{title}</h3>
+                    {journalMetric && (
+                      <span class="journal-metric">
+                        {journalMetric.index} · IF {journalMetric.impactFactor.toFixed(1)}
+                      </span>
+                    )}
+                  </div>
                   <AuthorList authors={authors} selfName={profile.name} />
                   <p class="venue">{venue}</p>
                   {links.length > 0 && (
