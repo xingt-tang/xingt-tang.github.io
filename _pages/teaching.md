@@ -10,4 +10,4 @@ nav_order: 6
 
 ### Spring 2026 — Python Programming
 
-### Spring 2026 — Deep Learning
+### Fall 2026 — Machine Learning System
