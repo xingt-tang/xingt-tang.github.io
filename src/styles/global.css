@@ -251,6 +251,27 @@ a:focus-visible {
   font-size: 0.7em;
 }
 
+.collaboration-note {
+  max-width: 680px;
+  margin: 16px 0 0;
+  padding: 12px 15px 12px 38px;
+  border: 1px solid color-mix(in srgb, var(--accent) 30%, var(--line));
+  border-left: 3px solid var(--accent);
+  border-radius: 5px;
+  background: var(--accent-soft);
+  color: var(--text);
+  font-size: 0.82rem;
+  font-weight: 610;
+  line-height: 1.55;
+}
+
+.collaboration-note::before {
+  content: "✦";
+  float: left;
+  margin-left: -23px;
+  color: var(--accent);
+}
+
 .profile-panel {
   position: sticky;
   top: calc(var(--header-height) + 32px);
@@ -265,15 +286,6 @@ a:focus-visible {
   object-fit: cover;
   object-position: 50% 35%;
   box-shadow: var(--shadow);
-}
-
-.profile-panel p {
-  margin: 18px 0 0;
-  padding-left: 13px;
-  border-left: 2px solid var(--accent);
-  color: var(--muted);
-  font-size: 0.78rem;
-  line-height: 1.55;
 }
 
 .content-section {
@@ -989,14 +1001,11 @@ a:focus-visible {
 
   .profile-panel {
     position: static;
-    display: grid;
-    grid-template-columns: minmax(150px, 0.7fr) minmax(0, 1fr);
-    gap: 18px;
-    align-items: end;
+    display: block;
   }
 
-  .profile-panel p {
-    margin: 0;
+  .profile-panel img {
+    width: min(58vw, 280px);
   }
 
   .content-section {

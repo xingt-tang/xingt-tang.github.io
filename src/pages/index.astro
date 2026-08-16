@@ -55,11 +55,12 @@ const publicationLinks = (fields: Record<string, string>) =>
             ))
           }
         </div>
+
+        <p class="collaboration-note">{profile.announcement}</p>
       </div>
 
       <aside class="profile-panel">
         <img src={profile.avatar} alt="Geometric portrait of Xing Tang" width="720" height="720" fetchpriority="high" />
-        <p>{profile.announcement}</p>
       </aside>
     </section>
 
