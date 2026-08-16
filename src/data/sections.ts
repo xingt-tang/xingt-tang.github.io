@@ -71,7 +71,7 @@ export const group: { name: string; categories: GroupCategory[] } = {
 export const teaching = [
   { term: "Fall 2025", course: "Fundamentals of Programming Languages" },
   { term: "Spring 2026", course: "Python Programming" },
-  { term: "Spring 2026", course: "Deep Learning" },
+  { term: "Fall 2026", course: "Machine Learning System" },
 ] as const;
 
 export const service = {

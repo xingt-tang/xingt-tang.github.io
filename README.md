@@ -28,18 +28,18 @@ npm run preview
 
 ## Content maintenance
 
-| Content                                                     | Source                            |
-| ----------------------------------------------------------- | --------------------------------- |
-| Profile, biography, links, avatar, and collaboration notice | `src/data/profile.ts`             |
-| Service, group, and teaching                                | `src/data/sections.ts`            |
-| News                                                        | `_news/*.md`                      |
-| Publications                                                | `_bibliography/papers.bib`        |
-| CCF ranks                                                   | `src/data/ccfRanks.ts`            |
-| Journal SCI and impact-factor metadata                      | `src/data/journalMetrics.ts`      |
-| Publication framework figures                               | `assets/img/publication_preview/` |
-| Publication PDFs                                            | `assets/pdf/`                     |
+| Content                                                     | Source                                   |
+| ----------------------------------------------------------- | ---------------------------------------- |
+| Profile, biography, links, avatar, and collaboration notice | `src/data/profile.ts`                    |
+| Service, group, and teaching                                | `src/data/sections.ts`                   |
+| News                                                        | `src/content/news/*.md`                  |
+| Publications                                                | `src/data/papers.bib`                    |
+| CCF ranks                                                   | `src/data/ccfRanks.ts`                   |
+| Journal SCI and impact-factor metadata                      | `src/data/journalMetrics.ts`             |
+| Publication framework figures                               | `public/assets/img/publication_preview/` |
+| Publication PDFs                                            | `public/assets/pdf/`                     |
 
-Set `selected = {true}` on a BibTeX entry to show it on the homepage. Add `preview = {filename.png}` to associate a framework figure stored in `assets/img/publication_preview/`. The complete list at `/publications/` is generated from the same BibTeX file and grouped by year.
+Set `selected = {true}` on a BibTeX entry to show it on the homepage. Add `preview = {filename.png}` to associate a framework figure stored in `public/assets/img/publication_preview/`. The complete list at `/publications/` is generated from the same BibTeX file and grouped by year.
 
 ## Project structure
 
@@ -48,9 +48,9 @@ Set `selected = {true}` on a BibTeX entry to show it on the homepage. Add `previ
 - `src/layouts/SiteLayout.astro` contains shared metadata, navigation, theme switching, and footer markup.
 - `src/styles/global.css` defines the responsive light and dark themes.
 - `src/utils/` contains the news and BibTeX parsers.
-- `public/` contains deployment-ready static files and exposes the shared `assets/` directory.
-
-The repository still contains parts of the previous Jekyll/al-folio implementation for reference, but the deployed site is built from the Astro source above.
+- `src/content/news/` contains the dated homepage announcements.
+- `src/data/papers.bib` is the single source of publication metadata.
+- `public/` contains deployment-ready images, PDFs, icons, and social-preview assets.
 
 ## Deployment
 

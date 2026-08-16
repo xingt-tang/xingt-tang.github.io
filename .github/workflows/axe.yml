@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       url:
-        description: "URL to be checked (e.g. #work)"
+        description: "URL to be checked (e.g. #publications)"
         required: false
 
 env:

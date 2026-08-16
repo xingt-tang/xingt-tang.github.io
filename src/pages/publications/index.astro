@@ -6,7 +6,7 @@ import { getJournalMetric } from "@data/journalMetrics";
 import SiteLayout from "@layouts/SiteLayout.astro";
 import { cleanLatex, getAuthorDetails, getVenue, parseBibtex, type BibEntry } from "@utils/bibtex";
 
-import bibtexSource from "../../../_bibliography/papers.bib?raw";
+import bibtexSource from "../../data/papers.bib?raw";
 
 interface PublicationGroup {
   year: string;

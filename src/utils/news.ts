@@ -4,7 +4,7 @@ export interface NewsItem {
   source: string;
 }
 
-const rawNewsFiles = import.meta.glob("../../_news/*.md", {
+const rawNewsFiles = import.meta.glob("../content/news/*.md", {
   eager: true,
   query: "?raw",
   import: "default",
