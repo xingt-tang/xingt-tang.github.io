@@ -48,6 +48,8 @@ export const ccfRanksByPublicationKey: Partial<Record<string, CcfRank>> = {
   // CCF B
   LLMPRIT: "B",
   ReAd: "B",
+  CARR: "B",
+  DDR: "B",
   AutoIFS: "B",
   PtOFA: "B",
   optfusion: "B",
