@@ -10,6 +10,7 @@ export type CcfRank = "A" | "B" | "C";
  */
 export const ccfRanksByPublicationKey: Partial<Record<string, CcfRank>> = {
   // CCF A
+  ARTS: "A",
   ams: "A",
   halluciation: "A",
   "Core-RAG": "A",
@@ -45,6 +46,8 @@ export const ccfRanksByPublicationKey: Partial<Record<string, CcfRank>> = {
   optinter: "A",
 
   // CCF B
+  LLMPRIT: "B",
+  ReAd: "B",
   AutoIFS: "B",
   PtOFA: "B",
   optfusion: "B",
