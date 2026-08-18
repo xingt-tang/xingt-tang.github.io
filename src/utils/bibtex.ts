@@ -30,7 +30,9 @@ function matchingBrace(source: string, from: number): number {
 
 export function parseBibtex(source: string): BibEntry[] {
   const entries: BibEntry[] = [];
-  const cleaned = source.replace(/%[^\n]*/g, "");
+  // Treat only full-line percent comments as comments so URL-encoded values
+  // such as `%20` remain intact inside BibTeX fields.
+  const cleaned = source.replace(/^\s*%[^\n]*/gm, "");
   const matches = [...cleaned.matchAll(/@(\w+)\s*\{/g)];
 
   for (const match of matches) {
