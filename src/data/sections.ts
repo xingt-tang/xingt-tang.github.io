@@ -14,7 +14,10 @@ export const group: { name: string; categories: GroupCategory[] } = {
   categories: [
     {
       label: "Faculty",
-      people: [{ name: "Prof. Xiuqiang He", href: "https://he-xiuqiang.github.io/" }, { name: "Prof. Lingjie Li" }],
+      people: [
+        { name: "Prof. Xiuqiang He", href: "https://he-xiuqiang.github.io/" },
+        { name: "Prof. Lingjie Li", href: "https://scholar.google.com/citations?user=0SatikoAAAAJ&hl=zh-TW" },
+      ],
     },
     {
       label: "Ph.D. Students",
