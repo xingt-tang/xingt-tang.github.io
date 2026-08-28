@@ -743,17 +743,16 @@ a:focus-visible {
   border-bottom: 1px solid var(--line);
 }
 
-.journal-list summary {
+.journal-list-heading {
   padding: 19px 0;
   display: flex;
   justify-content: space-between;
   gap: 20px;
-  cursor: pointer;
   font-size: 0.86rem;
   font-weight: 690;
 }
 
-.journal-list summary span:last-child {
+.journal-list-heading span:last-child {
   color: var(--muted);
   font-size: 0.72rem;
   font-weight: 500;

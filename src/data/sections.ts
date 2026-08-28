@@ -23,6 +23,11 @@ export const group: { name: string; categories: GroupCategory[] } = {
           name: "Yuhao Wu",
           note: "co-supervised with Prof. Dugang Liu; WISE 2026",
         },
+        {
+          name: "Haoran Wang",
+          href: "https://scholar.google.com/citations?user=1lhCyb8AAAAJ&hl=en",
+          note: "visiting Ph.D. student",
+        },
       ],
     },
     {
@@ -41,10 +46,16 @@ export const group: { name: string; categories: GroupCategory[] } = {
     {
       label: "Undergraduate Students",
       people: [
-        { name: "Jingyang Bin", note: "RecSys 2026, CIKM 2026, KDD 2026" },
-        { name: "Hanchong Chen", note: "master's student at PolyU in Hong Kong" },
+        { name: "Peipeng Zhang" },
         { name: "Zhuanglin Chen" },
         { name: "Xiongfeng Shan" },
+      ],
+    },
+    {
+      label: "Alumni",
+      people: [
+        { name: "Jingyang Bin", note: "RecSys 2026, CIKM 2026, KDD 2026" },
+        { name: "Hanchong Chen", note: "now at The Hong Kong Polytechnic University" },
       ],
     },
     {
