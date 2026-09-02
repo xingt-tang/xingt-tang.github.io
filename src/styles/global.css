@@ -578,15 +578,6 @@ a:focus-visible {
   padding-right: 0;
 }
 
-.group-category:last-child:nth-child(odd) ul {
-  columns: 2;
-  column-gap: 52px;
-}
-
-.group-category:last-child:nth-child(odd) li {
-  break-inside: avoid;
-}
-
 .group-category h3,
 .service-block h3 {
   margin: 0 0 17px;
@@ -603,8 +594,18 @@ a:focus-visible {
   list-style: none;
 }
 
+.group-category ul {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0, 1fr);
+  column-gap: 24px;
+  align-content: start;
+}
+
 .group-category li {
   position: relative;
+  min-width: 0;
   padding: 9px 0 9px 16px;
 }
 
@@ -636,6 +637,10 @@ a:focus-visible {
   color: var(--muted);
   font-size: 0.76rem;
   line-height: 1.5;
+}
+
+.group-category p span {
+  display: block;
 }
 
 .teaching-list {
@@ -1058,10 +1063,6 @@ a:focus-visible {
 
   .group-category:last-child:nth-child(odd) {
     grid-column: 1;
-  }
-
-  .group-category:last-child:nth-child(odd) ul {
-    columns: 1;
   }
 
   .teaching-list {

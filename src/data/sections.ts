@@ -1,7 +1,7 @@
 export interface Person {
   name: string;
   href?: string;
-  note?: string;
+  note?: string | string[];
 }
 
 export interface GroupCategory {
@@ -24,12 +24,16 @@ export const group: { name: string; categories: GroupCategory[] } = {
       people: [
         {
           name: "Yuhao Wu",
-          note: "co-supervised with Prof. Dugang Liu; WISE 2026",
+          note: ["co-supervised with Prof. Dugang Liu", "WISE 2026"],
         },
         {
           name: "Haoran Wang",
           href: "https://scholar.google.com/citations?user=1lhCyb8AAAAJ&hl=en",
           note: "visiting Ph.D. student",
+        },
+        {
+          name: "Haolin Yang",
+          note: "co-supervised with Prof. Xiuqiang He",
         },
       ],
     },
@@ -38,11 +42,20 @@ export const group: { name: string; categories: GroupCategory[] } = {
       people: [
         {
           name: "Zhentai Chen",
-          note: "co-supervised with Prof. Jingyan Jiang; internship at Ant Group; SIGIR 2026",
+          note: ["co-supervised with Prof. Jingyan Jiang", "internship at Ant Group · SIGIR 2026"],
         },
         {
           name: "Jun Zhang",
-          note: "co-supervised with Prof. Dugang Liu; internship at JD.com; SIGIR 2026",
+          note: ["co-supervised with Prof. Dugang Liu", "internship at JD.com · SIGIR 2026"],
+        },
+        { name: "Chensheng Hong" },
+        {
+          name: "Hailong Qi",
+          note: "co-supervised with Prof. Dugang Liu",
+        },
+        {
+          name: "Yonglin Wei",
+          note: "co-supervised with Prof. Dugang Liu",
         },
       ],
     },

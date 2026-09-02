@@ -222,7 +222,15 @@ const publicationLinks = (fields: Record<string, string>) =>
                       ) : (
                         <strong>{person.name}</strong>
                       )}
-                      {person.note && <p>{person.note}</p>}
+                      {
+                        person.note && (
+                          <p>
+                            {(Array.isArray(person.note) ? person.note : [person.note]).map((line) => (
+                              <span>{line}</span>
+                            ))}
+                          </p>
+                        )
+                      }
                     </div>
                   </li>
                 ))}
