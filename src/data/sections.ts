@@ -48,7 +48,6 @@ export const group: { name: string; categories: GroupCategory[] } = {
           name: "Jun Zhang",
           note: ["co-supervised with Prof. Dugang Liu", "internship at JD.com · SIGIR 2026"],
         },
-        { name: "Chensheng Hong" },
         {
           name: "Hailong Qi",
           note: "co-supervised with Prof. Dugang Liu",
